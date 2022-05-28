@@ -1,0 +1,1373 @@
+2022-05-28 13:36:53,111 eolearn.core.eoworkflow DEBUG    Computing SentinelHubInputTask(*[], **{'bbox': BBox(((480000.0, 5125000.0), (485000.0, 5130000.0)), crs=CRS('32633')), 'time_interval': ['2019-01-01', '2019-12-31']})
+2022-05-28 13:36:53,118 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/catalog/search. Hash of sent request is 6c7ed4d02281acc58abe9991e1eb0b14
+2022-05-28 13:36:53,118 sentinelhub.download.session DEBUG    Creating a new authentication session with Sentinel Hub service
+2022-05-28 13:36:53,118 requests_oauthlib.oauth2_session DEBUG    Encoding `client_id` "5436d6fe-e90e-45e6-903a-2fd6ff563616" with `client_secret` as Basic auth credentials.
+2022-05-28 13:36:53,118 requests_oauthlib.oauth2_session DEBUG    Requesting url https://services.sentinel-hub.com/oauth/token using method POST.
+2022-05-28 13:36:53,118 requests_oauthlib.oauth2_session DEBUG    Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'} and data {'grant_type': 'client_credentials'}
+2022-05-28 13:36:53,118 requests_oauthlib.oauth2_session DEBUG    Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x000001C7C1DF8640>, 'verify': True, 'proxies': None, 'cert': None}.
+2022-05-28 13:36:53,120 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:36:54,110 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /oauth/token HTTP/1.1" 200 928
+2022-05-28 13:36:54,111 requests_oauthlib.oauth2_session DEBUG    Request to fetch token completed with status 200.
+2022-05-28 13:36:54,111 requests_oauthlib.oauth2_session DEBUG    Request url was https://services.sentinel-hub.com/oauth/token
+2022-05-28 13:36:54,111 requests_oauthlib.oauth2_session DEBUG    Request headers were {'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8', 'Content-Length': '29', 'Authorization': 'Basic NTQzNmQ2ZmUtZTkwZS00NWU2LTkwM2EtMmZkNmZmNTYzNjE2OmdYcTgtP0RzLjFUamU+MkpySDc3THk0R3ROTzEyd0VHT0YuMGFLNmQ='}
+2022-05-28 13:36:54,111 requests_oauthlib.oauth2_session DEBUG    Request body was grant_type=client_credentials
+2022-05-28 13:36:54,111 requests_oauthlib.oauth2_session DEBUG    Response headers were {'Date': 'Sat, 28 May 2022 11:36:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '928', 'Connection': 'keep-alive', 'cache-control': 'no-cache', 'set-cookie': 'shs1=f0cc4ff4-775a-4c03-bc82-f40936895a55;Version=1;Domain=services.sentinel-hub.com;Path=/oauth/;Secure;HttpOnly;SameSite=None', 'access-control-allow-origin': '*', 'access-control-allow-headers': 'origin,content-type,accept,accept-crs,authorization,cache-control', 'access-control-allow-credentials': 'true', 'access-control-allow-methods': 'GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH', 'access-control-max-age': '3600'} and content {"access_token":"eyJraWQiOiJzaCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI1ZmE1MWU3Yi1mMjQyLTRhN2ItODkwZi04NmM0OGU3MWQ5NjEiLCJhdWQiOiI1NDM2ZDZmZS1lOTBlLTQ1ZTYtOTAzYS0yZmQ2ZmY1NjM2MTYiLCJqdGkiOiJjYmUyYTZkOC03NGQxLTRiNjEtOTcxMS0xOTdiOTliNGEwNjEiLCJleHAiOjE2NTM3NDE0MTUsIm5hbWUiOiJKb3NlIEdvbWV6IiwiZW1haWwiOiJzMTA4NTQ5N0BzdHVkLnNiZy5hYy5hdCIsImdpdmVuX25hbWUiOiJKb3NlIiwiZmFtaWx5X25hbWUiOiJHb21leiIsInNpZCI6ImYwY2M0ZmY0LTc3NWEtNGMwMy1iYzgyLWY0MDkzNjg5NWE1NSIsImRpZCI6MSwiYWlkIjoiZGNkOGE1NmUtMDM0MS00MzI4LWJhMGQtZDFkYWY1YTRmZDM1IiwiZCI6eyIxIjp7InJhIjp7InJhZyI6MX0sInQiOjExMDAwfX19.MANrw52_8W3EhiVatEEgh799c12BTdvgI65Biy1ogpFJDxd4AEVpY3dYYMojBHKxSRGPi70Ko8wJRsnMs6w4914bxU92QtZeWB9UwpMxAwG58b1_Lxo7Tj_IocCdaGPdXBM0Fl-KxivXsYYb2BDzvGgbn9EBi0GxopKgvA4ZQYC-8Y6TysTNS53mLOu01P7_i-fnYOYd8FYf1QluQISnj5a66AO5ohtgG6J0zBkydATKm7Z72LWdoZW1ziZkChRfUbKSmKn2hLbXeopt2CYY4VzOhbJDZmGQ4W_oyVBLzcBo-4vnztywGruVJEgnocsAhhPC3nBO_7gBbthtl5RSlQ","expires_in":3599}.
+2022-05-28 13:36:54,111 requests_oauthlib.oauth2_session DEBUG    Invoking 0 token response hooks.
+2022-05-28 13:36:54,111 requests_oauthlib.oauth2_session DEBUG    Obtained token {'access_token': 'eyJraWQiOiJzaCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI1ZmE1MWU3Yi1mMjQyLTRhN2ItODkwZi04NmM0OGU3MWQ5NjEiLCJhdWQiOiI1NDM2ZDZmZS1lOTBlLTQ1ZTYtOTAzYS0yZmQ2ZmY1NjM2MTYiLCJqdGkiOiJjYmUyYTZkOC03NGQxLTRiNjEtOTcxMS0xOTdiOTliNGEwNjEiLCJleHAiOjE2NTM3NDE0MTUsIm5hbWUiOiJKb3NlIEdvbWV6IiwiZW1haWwiOiJzMTA4NTQ5N0BzdHVkLnNiZy5hYy5hdCIsImdpdmVuX25hbWUiOiJKb3NlIiwiZmFtaWx5X25hbWUiOiJHb21leiIsInNpZCI6ImYwY2M0ZmY0LTc3NWEtNGMwMy1iYzgyLWY0MDkzNjg5NWE1NSIsImRpZCI6MSwiYWlkIjoiZGNkOGE1NmUtMDM0MS00MzI4LWJhMGQtZDFkYWY1YTRmZDM1IiwiZCI6eyIxIjp7InJhIjp7InJhZyI6MX0sInQiOjExMDAwfX19.MANrw52_8W3EhiVatEEgh799c12BTdvgI65Biy1ogpFJDxd4AEVpY3dYYMojBHKxSRGPi70Ko8wJRsnMs6w4914bxU92QtZeWB9UwpMxAwG58b1_Lxo7Tj_IocCdaGPdXBM0Fl-KxivXsYYb2BDzvGgbn9EBi0GxopKgvA4ZQYC-8Y6TysTNS53mLOu01P7_i-fnYOYd8FYf1QluQISnj5a66AO5ohtgG6J0zBkydATKm7Z72LWdoZW1ziZkChRfUbKSmKn2hLbXeopt2CYY4VzOhbJDZmGQ4W_oyVBLzcBo-4vnztywGruVJEgnocsAhhPC3nBO_7gBbthtl5RSlQ', 'expires_in': 3599, 'expires_at': 1653741413.111744}.
+2022-05-28 13:36:54,115 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:36:54,895 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/catalog/search HTTP/1.1" 200 2439
+2022-05-28 13:36:54,896 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/catalog/search
+2022-05-28 13:36:54,931 eolearn.io.sentinelhub_process DEBUG    Downloading 44 requests of type DataCollection.SENTINEL2_L1C
+2022-05-28 13:36:54,931 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 3c0357dcf8576f08e59d4c7ea015c75b
+2022-05-28 13:36:54,932 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:36:54,932 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:36:54,933 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:36:54,933 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:36:54,934 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:36:54,969 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:36:54,984 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:36:54,984 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:36:54,984 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:36:54,984 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is c50961543683d9311c37eff408993c4c
+2022-05-28 13:36:54,986 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:36:55,045 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:36:55,045 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:36:55,045 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 0f0395bf0e72c3ae615578e65065f6fd
+2022-05-28 13:36:55,047 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:36:55,109 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:36:55,109 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 616c43c47926c1cc0b45fc0fac8484d7
+2022-05-28 13:36:55,110 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:36:55,173 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 80a92510df1c916e55b122009afb247b
+2022-05-28 13:36:55,174 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:00,080 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:00,727 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:00,787 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is b5954e60c22979f10df199e1bcb2a86c
+2022-05-28 13:37:00,788 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:01,478 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:01,711 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:01,742 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:01,860 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:02,269 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:02,298 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:02,355 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 2b9de720daff66f01e5b262b23de70b5
+2022-05-28 13:37:02,357 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:02,375 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.02
+2022-05-28 13:37:02,396 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:02,411 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9d1743388550cc82a5cd32acb601fe1a
+2022-05-28 13:37:02,412 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:03,111 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:03,155 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f974b3efe1fb7fb412425959c18756e
+2022-05-28 13:37:03,156 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:03,438 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:03,482 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ae847f673ab1fc588ac05661efc51845
+2022-05-28 13:37:03,484 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:03,889 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:04,196 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:04,243 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 76d47fb602d0c77b361a4f5a4e1db851
+2022-05-28 13:37:04,245 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:04,703 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:05,304 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:05,369 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:05,413 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is cf8c91480c7d155bfc753229098cab8b
+2022-05-28 13:37:05,414 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:06,011 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:06,086 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 72c7a2c64ce49981899d48e87eed07aa
+2022-05-28 13:37:06,087 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:06,169 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:06,835 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:07,172 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:07,219 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is dec387c78f5d4a6bc2a64dbf3c39b8c4
+2022-05-28 13:37:07,220 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:08,181 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:08,623 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:08,771 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:08,819 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is c5e41508c1f9fb1f68ff35d8bedb2435
+2022-05-28 13:37:08,822 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:09,111 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:09,160 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 371fc7ccb1ac19ccb622c7fc057eebec
+2022-05-28 13:37:09,161 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:09,224 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:09,271 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is e0861e08fdcd54b5d4f5263f486ebccd
+2022-05-28 13:37:09,272 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:09,866 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:10,399 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:10,442 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is dfec392e7efa0d8d023cf12cd1cbf440
+2022-05-28 13:37:10,443 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:10,989 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:10,990 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:11,007 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:11,009 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.21
+2022-05-28 13:37:11,227 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is dfec392e7efa0d8d023cf12cd1cbf440
+2022-05-28 13:37:11,229 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:11,496 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:11,502 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:11,604 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8b30bfdeac515cec924923eb8b095c58
+2022-05-28 13:37:11,606 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:11,607 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:37:11,647 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:11,663 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:11,665 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:12,366 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:12,528 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:12,961 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:12,963 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.50
+2022-05-28 13:37:13,006 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:13,053 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.40
+2022-05-28 13:37:13,273 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:13,275 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:13,277 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.31
+2022-05-28 13:37:13,318 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.26
+2022-05-28 13:37:13,395 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:13,397 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.22
+2022-05-28 13:37:13,457 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.16
+2022-05-28 13:37:13,473 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.14
+2022-05-28 13:37:13,580 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:37:13,595 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.02
+2022-05-28 13:37:13,626 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:13,626 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:13,626 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:13,626 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:13,626 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:13,628 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:13,688 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:13,688 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:13,688 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:13,688 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:13,689 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:13,752 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 2d4ceba60523abfeaa317fe8542b6638
+2022-05-28 13:37:13,752 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:13,752 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:13,754 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:13,815 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:13,815 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is dfec392e7efa0d8d023cf12cd1cbf440
+2022-05-28 13:37:13,817 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:13,878 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8b30bfdeac515cec924923eb8b095c58
+2022-05-28 13:37:13,880 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:16,215 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:16,217 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:16,218 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:16,281 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:16,283 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.89
+2022-05-28 13:37:16,340 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:16,342 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.83
+2022-05-28 13:37:16,391 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:16,392 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.78
+2022-05-28 13:37:16,427 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:16,428 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.75
+2022-05-28 13:37:16,753 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:16,754 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.43
+2022-05-28 13:37:17,180 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:17,180 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:17,180 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:17,195 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:17,195 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:17,195 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:17,195 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:17,195 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 2d4ceba60523abfeaa317fe8542b6638
+2022-05-28 13:37:17,196 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:17,259 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8b30bfdeac515cec924923eb8b095c58
+2022-05-28 13:37:17,259 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:17,259 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:17,259 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:17,261 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:17,323 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:17,323 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:17,324 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:37:17,326 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:17,369 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:17,385 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is dfec392e7efa0d8d023cf12cd1cbf440
+2022-05-28 13:37:17,386 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:17,387 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:17,449 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:17,452 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:19,813 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:19,814 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.73
+2022-05-28 13:37:20,010 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:20,011 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.54
+2022-05-28 13:37:20,040 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:20,041 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.51
+2022-05-28 13:37:20,062 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:20,063 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.49
+2022-05-28 13:37:20,549 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:20,564 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:20,564 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:20,564 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:20,564 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is dfec392e7efa0d8d023cf12cd1cbf440
+2022-05-28 13:37:20,566 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:20,627 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:20,627 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:20,627 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:20,628 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:20,689 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:20,689 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8b30bfdeac515cec924923eb8b095c58
+2022-05-28 13:37:20,690 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:20,751 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:20,753 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:21,655 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:22,027 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:22,788 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 90d134f565063a449fd7e00c45c65e90
+2022-05-28 13:37:22,792 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:23,348 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:23,349 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.59
+2022-05-28 13:37:23,430 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:23,432 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.51
+2022-05-28 13:37:23,469 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:23,471 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.47
+2022-05-28 13:37:23,681 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:23,682 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.34
+2022-05-28 13:37:23,957 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.06
+2022-05-28 13:37:23,957 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.06
+2022-05-28 13:37:23,957 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.06
+2022-05-28 13:37:24,019 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:24,019 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:24,019 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8b30bfdeac515cec924923eb8b095c58
+2022-05-28 13:37:24,020 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:24,035 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:37:24,083 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:24,083 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:24,083 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:24,085 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:24,147 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:24,147 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:24,149 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:24,211 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 90d134f565063a449fd7e00c45c65e90
+2022-05-28 13:37:24,213 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:24,467 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:24,977 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:25,995 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9ca3b6c18dfda6e51107a51b95261557
+2022-05-28 13:37:25,998 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:27,118 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:27,120 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.14
+2022-05-28 13:37:27,147 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:27,147 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:27,148 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.11
+2022-05-28 13:37:27,150 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.11
+2022-05-28 13:37:27,200 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:37:27,201 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.06
+2022-05-28 13:37:27,234 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:37:27,236 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.04
+2022-05-28 13:37:27,262 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:27,277 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:27,277 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:27,277 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:27,277 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:27,277 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:27,293 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:27,293 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:27,293 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:27,293 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:27,293 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:27,295 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:27,354 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:27,354 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:27,354 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:27,354 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:27,370 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:27,370 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:27,370 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:27,370 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:27,372 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:27,433 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:27,433 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:27,433 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8b30bfdeac515cec924923eb8b095c58
+2022-05-28 13:37:27,435 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:27,496 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:27,496 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9ca3b6c18dfda6e51107a51b95261557
+2022-05-28 13:37:27,498 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:27,560 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 90d134f565063a449fd7e00c45c65e90
+2022-05-28 13:37:27,562 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:29,561 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:29,563 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:29,565 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:30,048 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:30,050 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.65
+2022-05-28 13:37:30,105 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:30,106 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.59
+2022-05-28 13:37:30,107 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:30,108 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.59
+2022-05-28 13:37:30,281 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:30,283 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.43
+2022-05-28 13:37:30,579 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:30,581 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.30
+2022-05-28 13:37:30,701 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.17
+2022-05-28 13:37:30,716 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.16
+2022-05-28 13:37:30,716 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.16
+2022-05-28 13:37:30,716 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.16
+2022-05-28 13:37:30,886 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:30,886 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:30,886 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:30,886 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:30,886 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:30,902 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:30,902 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:30,902 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:30,902 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:30,902 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8b30bfdeac515cec924923eb8b095c58
+2022-05-28 13:37:30,904 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:30,965 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:30,965 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:30,965 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:30,965 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:30,966 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:31,028 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:31,028 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:31,028 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9ca3b6c18dfda6e51107a51b95261557
+2022-05-28 13:37:31,030 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:31,092 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 90d134f565063a449fd7e00c45c65e90
+2022-05-28 13:37:31,092 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:31,095 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:31,158 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:31,160 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:33,430 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:33,432 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.71
+2022-05-28 13:37:33,549 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:33,550 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.59
+2022-05-28 13:37:34,030 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:34,031 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.20
+2022-05-28 13:37:34,138 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:34,139 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.14
+2022-05-28 13:37:34,152 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.14
+2022-05-28 13:37:34,152 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.14
+2022-05-28 13:37:34,245 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:34,292 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:34,307 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:34,307 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:34,307 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:34,307 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:34,308 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:34,370 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:34,370 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:34,370 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:34,371 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:34,434 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:34,434 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8b30bfdeac515cec924923eb8b095c58
+2022-05-28 13:37:34,435 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:34,496 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 90d134f565063a449fd7e00c45c65e90
+2022-05-28 13:37:34,498 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:34,835 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:34,837 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.65
+2022-05-28 13:37:35,496 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9ca3b6c18dfda6e51107a51b95261557
+2022-05-28 13:37:35,498 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:36,591 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:37:36,592 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.10
+2022-05-28 13:37:36,640 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:37:36,642 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:36,704 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:36,704 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:36,705 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:36,766 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:36,767 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:36,896 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:36,897 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.81
+2022-05-28 13:37:37,587 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:37,588 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.14
+2022-05-28 13:37:37,719 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:37,734 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:37,734 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 90d134f565063a449fd7e00c45c65e90
+2022-05-28 13:37:37,735 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:37,796 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8b30bfdeac515cec924923eb8b095c58
+2022-05-28 13:37:37,798 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:37,893 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 285
+2022-05-28 13:37:37,895 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:37,905 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9ca3b6c18dfda6e51107a51b95261557
+2022-05-28 13:37:37,906 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:37,936 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:37,939 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.02
+2022-05-28 13:37:37,967 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:37,967 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:37,970 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:37,971 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:38,028 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:38,031 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:40,694 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:40,695 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.26
+2022-05-28 13:37:40,771 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:40,772 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.18
+2022-05-28 13:37:40,781 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:40,782 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.17
+2022-05-28 13:37:40,786 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:40,787 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.17
+2022-05-28 13:37:40,954 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:40,954 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:40,954 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7f6120d78727ecc9ec493d5f55d11958
+2022-05-28 13:37:40,956 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:40,970 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:37:41,016 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:41,016 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:41,016 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9ca3b6c18dfda6e51107a51b95261557
+2022-05-28 13:37:41,017 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:41,078 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8b30bfdeac515cec924923eb8b095c58
+2022-05-28 13:37:41,078 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:41,080 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:41,140 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:41,143 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:41,892 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:42,310 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:43,038 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 87b35b04c97666c25420d12713d7b944
+2022-05-28 13:37:43,040 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:43,764 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:43,766 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.40
+2022-05-28 13:37:43,790 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:43,791 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.38
+2022-05-28 13:37:44,178 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:44,178 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:44,180 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:44,240 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9ca3b6c18dfda6e51107a51b95261557
+2022-05-28 13:37:44,241 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:44,538 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:44,539 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.85
+2022-05-28 13:37:45,104 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:45,394 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 87b35b04c97666c25420d12713d7b944
+2022-05-28 13:37:45,396 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:45,545 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:45,702 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 99de356b912e796fd686fa5589cd6e2f
+2022-05-28 13:37:45,704 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:45,875 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:46,027 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:46,029 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.45
+2022-05-28 13:37:46,178 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:46,180 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.33
+2022-05-28 13:37:46,268 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:46,316 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.19
+2022-05-28 13:37:46,484 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.02
+2022-05-28 13:37:46,515 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:46,515 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:46,515 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:46,517 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:46,578 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:46,578 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9ca3b6c18dfda6e51107a51b95261557
+2022-05-28 13:37:46,580 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:46,642 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 55cd4b93934616032499c60700016bb1
+2022-05-28 13:37:46,644 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:47,387 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:47,389 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.25
+2022-05-28 13:37:47,543 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:47,545 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.16
+2022-05-28 13:37:47,643 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.07
+2022-05-28 13:37:47,719 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:47,719 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 99de356b912e796fd686fa5589cd6e2f
+2022-05-28 13:37:47,721 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:47,780 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 87b35b04c97666c25420d12713d7b944
+2022-05-28 13:37:47,783 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:49,105 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:49,106 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.76
+2022-05-28 13:37:49,110 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:49,112 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.76
+2022-05-28 13:37:49,191 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:49,192 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.69
+2022-05-28 13:37:49,436 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:49,437 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.54
+2022-05-28 13:37:49,535 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:49,537 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.45
+2022-05-28 13:37:49,875 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.10
+2022-05-28 13:37:49,891 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.09
+2022-05-28 13:37:49,891 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.09
+2022-05-28 13:37:49,984 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:49,984 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:49,984 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:49,984 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9ca3b6c18dfda6e51107a51b95261557
+2022-05-28 13:37:49,986 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:50,000 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:37:50,046 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:50,046 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:50,046 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:50,046 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 55cd4b93934616032499c60700016bb1
+2022-05-28 13:37:50,047 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:50,109 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:50,109 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:50,109 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 99de356b912e796fd686fa5589cd6e2f
+2022-05-28 13:37:50,111 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:50,170 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 87b35b04c97666c25420d12713d7b944
+2022-05-28 13:37:50,170 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:50,172 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:50,238 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:50,240 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:52,840 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:52,842 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.34
+2022-05-28 13:37:53,184 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:53,185 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.13
+2022-05-28 13:37:53,186 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.13
+2022-05-28 13:37:53,261 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:37:53,262 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.06
+2022-05-28 13:37:53,326 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:53,326 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:53,326 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:53,328 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:53,387 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:53,387 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 99de356b912e796fd686fa5589cd6e2f
+2022-05-28 13:37:53,389 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:53,431 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:37:53,433 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:53,451 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.02
+2022-05-28 13:37:53,482 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:53,482 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 87b35b04c97666c25420d12713d7b944
+2022-05-28 13:37:53,484 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:53,545 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 55cd4b93934616032499c60700016bb1
+2022-05-28 13:37:53,547 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:54,193 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:54,636 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:55,374 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:37:55,394 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:56,218 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:56,219 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.50
+2022-05-28 13:37:56,239 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:56,240 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.49
+2022-05-28 13:37:56,336 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:56,337 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.39
+2022-05-28 13:37:56,719 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:37:56,734 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:56,734 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 791687610814a56ab7e36f9898d6636c
+2022-05-28 13:37:56,734 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:56,735 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:56,797 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 99de356b912e796fd686fa5589cd6e2f
+2022-05-28 13:37:56,797 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:56,799 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:56,858 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:37:56,859 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.10
+2022-05-28 13:37:56,860 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.10
+2022-05-28 13:37:56,972 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:37:56,972 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:37:56,973 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:57,035 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 55cd4b93934616032499c60700016bb1
+2022-05-28 13:37:57,037 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:58,223 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:37:58,664 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:37:58,730 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is e66338bad28fff56b7a9435f8761c463
+2022-05-28 13:37:58,732 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:37:59,563 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:59,564 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.80
+2022-05-28 13:37:59,604 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:59,606 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.76
+2022-05-28 13:37:59,886 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:37:59,888 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.55
+2022-05-28 13:38:00,126 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:00,370 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.08
+2022-05-28 13:38:00,370 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.08
+2022-05-28 13:38:00,395 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:00,445 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:00,446 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:38:00,461 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:00,461 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 55cd4b93934616032499c60700016bb1
+2022-05-28 13:38:00,461 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:00,463 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:00,491 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.02
+2022-05-28 13:38:00,524 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:00,524 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:00,524 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is e66338bad28fff56b7a9435f8761c463
+2022-05-28 13:38:00,525 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:00,586 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:00,586 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:38:00,588 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:00,647 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is d6513e0794f3b026e16efe08319a09de
+2022-05-28 13:38:00,649 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:00,773 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:02,042 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 5072405f0027961d5d5729354b0e4307
+2022-05-28 13:38:02,044 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:03,419 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:03,420 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.60
+2022-05-28 13:38:03,524 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:03,525 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.51
+2022-05-28 13:38:03,550 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:03,551 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.48
+2022-05-28 13:38:03,570 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:03,571 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.46
+2022-05-28 13:38:04,025 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:04,041 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 5072405f0027961d5d5729354b0e4307
+2022-05-28 13:38:04,041 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:04,041 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:04,041 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:04,043 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:04,104 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:04,104 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:04,104 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is e66338bad28fff56b7a9435f8761c463
+2022-05-28 13:38:04,105 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:04,168 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:04,168 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is d6513e0794f3b026e16efe08319a09de
+2022-05-28 13:38:04,169 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:04,231 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:38:04,233 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:04,665 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:05,244 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:06,057 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ebc5a71432c2ef248cb1e6d4f7342b63
+2022-05-28 13:38:06,060 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:06,656 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:06,657 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.65
+2022-05-28 13:38:07,011 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:07,013 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.33
+2022-05-28 13:38:07,147 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:07,148 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.25
+2022-05-28 13:38:07,327 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.07
+2022-05-28 13:38:07,358 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:07,405 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ebc5a71432c2ef248cb1e6d4f7342b63
+2022-05-28 13:38:07,405 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:07,406 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:07,406 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:07,468 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:07,468 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:38:07,470 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:07,532 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is d6513e0794f3b026e16efe08319a09de
+2022-05-28 13:38:07,534 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:08,084 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:08,103 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:08,499 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:08,531 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:09,499 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:09,501 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:09,506 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:09,578 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ac3fa429d71a5fc6b2b4310f8effa736
+2022-05-28 13:38:09,581 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:10,191 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:10,192 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.62
+2022-05-28 13:38:10,219 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:10,220 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.59
+2022-05-28 13:38:10,263 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:10,265 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.55
+2022-05-28 13:38:10,479 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:10,480 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.50
+2022-05-28 13:38:10,487 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:10,488 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.50
+2022-05-28 13:38:10,828 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.16
+2022-05-28 13:38:10,828 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.16
+2022-05-28 13:38:10,828 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.16
+2022-05-28 13:38:10,999 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:10,999 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:10,999 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:10,999 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:10,999 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ac3fa429d71a5fc6b2b4310f8effa736
+2022-05-28 13:38:11,000 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:11,062 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:11,062 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:11,062 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:11,062 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is d6513e0794f3b026e16efe08319a09de
+2022-05-28 13:38:11,064 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:11,123 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:11,123 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:11,124 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:11,126 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:11,184 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ebc5a71432c2ef248cb1e6d4f7342b63
+2022-05-28 13:38:11,186 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:11,186 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:11,246 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:38:11,248 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:13,545 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:13,546 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:13,547 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.75
+2022-05-28 13:38:13,548 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.75
+2022-05-28 13:38:13,835 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:13,836 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.47
+2022-05-28 13:38:13,841 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:13,842 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.45
+2022-05-28 13:38:13,897 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:13,899 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.40
+2022-05-28 13:38:14,307 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ac3fa429d71a5fc6b2b4310f8effa736
+2022-05-28 13:38:14,307 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:14,307 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:14,307 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:14,307 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:14,309 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:14,369 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:14,369 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:14,369 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:14,369 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:38:14,370 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:14,431 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:14,431 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:14,431 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is d6513e0794f3b026e16efe08319a09de
+2022-05-28 13:38:14,432 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:14,493 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:14,493 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ebc5a71432c2ef248cb1e6d4f7342b63
+2022-05-28 13:38:14,495 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:14,555 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:14,558 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:17,556 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:38:17,558 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:17,564 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 285
+2022-05-28 13:38:17,565 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:17,575 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:38:17,577 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:38:17,578 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:17,587 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:17,587 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:17,599 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:17,600 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:17,650 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:17,650 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:17,650 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:17,651 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:17,713 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:17,713 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is d6513e0794f3b026e16efe08319a09de
+2022-05-28 13:38:17,715 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:17,776 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ebc5a71432c2ef248cb1e6d4f7342b63
+2022-05-28 13:38:17,778 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:18,616 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:19,058 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:19,842 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is aa59b936e8f5e39871826f2aeb5b3155
+2022-05-28 13:38:19,844 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:20,380 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:20,381 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.46
+2022-05-28 13:38:20,408 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:20,409 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.43
+2022-05-28 13:38:20,464 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:20,466 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.37
+2022-05-28 13:38:20,468 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:20,469 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.37
+2022-05-28 13:38:20,662 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:20,663 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.26
+2022-05-28 13:38:20,841 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.07
+2022-05-28 13:38:20,841 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.07
+2022-05-28 13:38:20,841 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.07
+2022-05-28 13:38:20,857 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.06
+2022-05-28 13:38:20,920 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:20,920 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:20,920 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:20,920 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:20,922 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:20,935 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:20,982 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ebc5a71432c2ef248cb1e6d4f7342b63
+2022-05-28 13:38:20,982 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:20,982 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:20,982 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:20,984 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:21,045 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:21,045 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:21,045 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is aa59b936e8f5e39871826f2aeb5b3155
+2022-05-28 13:38:21,046 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:21,109 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is d6513e0794f3b026e16efe08319a09de
+2022-05-28 13:38:21,109 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:21,111 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:21,173 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:38:21,176 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:23,708 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:23,709 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.45
+2022-05-28 13:38:23,724 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:23,725 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.43
+2022-05-28 13:38:23,735 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:23,736 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.42
+2022-05-28 13:38:23,742 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:23,743 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.42
+2022-05-28 13:38:23,806 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:23,807 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.36
+2022-05-28 13:38:24,172 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:24,172 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:24,172 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:24,173 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:24,173 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:24,174 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:24,234 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:24,234 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:24,234 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:24,234 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ebc5a71432c2ef248cb1e6d4f7342b63
+2022-05-28 13:38:24,235 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:24,296 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:38:24,296 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:24,296 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:24,297 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:24,359 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:24,359 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is aa59b936e8f5e39871826f2aeb5b3155
+2022-05-28 13:38:24,361 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:24,420 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is d6513e0794f3b026e16efe08319a09de
+2022-05-28 13:38:24,422 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:26,762 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:26,764 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.95
+2022-05-28 13:38:26,932 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:26,933 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.79
+2022-05-28 13:38:26,960 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:26,961 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.76
+2022-05-28 13:38:26,977 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:26,978 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.75
+2022-05-28 13:38:27,116 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:27,118 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.61
+2022-05-28 13:38:27,717 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is ebc5a71432c2ef248cb1e6d4f7342b63
+2022-05-28 13:38:27,717 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:27,733 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:27,733 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:27,733 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:27,733 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:27,778 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:27,778 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:27,778 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:27,778 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:27,780 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:27,840 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:27,840 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:27,840 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:38:27,841 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:27,902 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:38:27,902 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:38:27,917 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:27,917 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is aa59b936e8f5e39871826f2aeb5b3155
+2022-05-28 13:38:27,918 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:27,978 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is d6513e0794f3b026e16efe08319a09de
+2022-05-28 13:38:27,980 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:30,302 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:30,304 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.61
+2022-05-28 13:38:30,327 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:30,329 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.59
+2022-05-28 13:38:30,572 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:30,574 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.42
+2022-05-28 13:38:30,932 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.07
+2022-05-28 13:38:30,932 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.07
+2022-05-28 13:38:30,993 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:31,009 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:31,009 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:31,009 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:31,010 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:31,012 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:38:31,013 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.06
+2022-05-28 13:38:31,071 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:31,071 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:31,071 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:31,086 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:31,086 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:31,086 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is aa59b936e8f5e39871826f2aeb5b3155
+2022-05-28 13:38:31,087 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:31,148 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:38:31,148 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:31,149 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:31,211 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is d6513e0794f3b026e16efe08319a09de
+2022-05-28 13:38:31,212 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:31,434 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:31,952 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:32,140 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:38:32,142 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:33,342 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:33,344 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.16
+2022-05-28 13:38:33,508 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:38:33,524 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:33,526 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:33,602 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:33,603 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is aa59b936e8f5e39871826f2aeb5b3155
+2022-05-28 13:38:33,605 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:33,918 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:33,919 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.69
+2022-05-28 13:38:34,445 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:34,446 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.26
+2022-05-28 13:38:34,621 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.08
+2022-05-28 13:38:34,700 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7610b1684af75b29ae1655a9a9a83af5
+2022-05-28 13:38:34,701 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:34,715 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:34,762 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:38:34,763 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:34,924 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:34,925 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.81
+2022-05-28 13:38:35,138 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:35,140 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.62
+2022-05-28 13:38:35,677 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:35,750 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:35,765 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:35,765 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is aa59b936e8f5e39871826f2aeb5b3155
+2022-05-28 13:38:35,766 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:35,828 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:35,830 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:36,048 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:36,111 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f87f518a958ee8ee7dcdc93b40a873fe
+2022-05-28 13:38:36,113 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:36,312 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:36,314 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.57
+2022-05-28 13:38:36,892 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:38:36,894 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:37,873 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:37,875 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.15
+2022-05-28 13:38:37,954 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:38:37,955 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.07
+2022-05-28 13:38:38,015 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:38,033 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:38,033 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f87f518a958ee8ee7dcdc93b40a873fe
+2022-05-28 13:38:38,035 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:38,095 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:38,097 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:38,480 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:39,052 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 968594a61cc7b03b18b0453771a86f03
+2022-05-28 13:38:39,055 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:39,262 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:39,264 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.81
+2022-05-28 13:38:39,323 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:39,654 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:39,705 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.37
+2022-05-28 13:38:40,074 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:38:40,075 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:40,089 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:40,137 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 559d680fa2599d751d93ecf4a0193440
+2022-05-28 13:38:40,138 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:40,168 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:40,170 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.14
+2022-05-28 13:38:40,307 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:40,323 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f87f518a958ee8ee7dcdc93b40a873fe
+2022-05-28 13:38:40,324 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:40,633 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:40,635 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.77
+2022-05-28 13:38:41,122 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:41,124 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.37
+2022-05-28 13:38:41,408 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.09
+2022-05-28 13:38:41,447 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:41,449 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.17
+2022-05-28 13:38:41,503 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.12
+2022-05-28 13:38:41,503 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.12
+2022-05-28 13:38:41,629 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:41,629 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:41,629 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 968594a61cc7b03b18b0453771a86f03
+2022-05-28 13:38:41,631 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:41,691 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:41,691 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:41,693 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:41,753 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:38:41,755 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:42,291 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:42,293 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.60
+2022-05-28 13:38:42,908 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f87f518a958ee8ee7dcdc93b40a873fe
+2022-05-28 13:38:42,909 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:43,518 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:43,520 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.81
+2022-05-28 13:38:43,601 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:43,603 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.73
+2022-05-28 13:38:44,163 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:44,307 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:44,309 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.20
+2022-05-28 13:38:44,337 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.19
+2022-05-28 13:38:44,337 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.19
+2022-05-28 13:38:44,504 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:44,526 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:38:44,540 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:44,540 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:44,540 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f87f518a958ee8ee7dcdc93b40a873fe
+2022-05-28 13:38:44,543 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:44,558 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:44,601 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:44,601 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:44,601 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:38:44,603 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:44,663 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:44,663 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:38:44,665 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:44,725 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:44,727 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:45,005 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:45,356 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:45,407 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:38:45,409 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:46,426 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:46,428 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.60
+2022-05-28 13:38:46,579 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:46,581 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.45
+2022-05-28 13:38:46,777 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:46,779 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.26
+2022-05-28 13:38:46,963 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:46,965 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.14
+2022-05-28 13:38:47,039 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:38:47,041 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.08
+2022-05-28 13:38:47,044 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.06
+2022-05-28 13:38:47,044 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.06
+2022-05-28 13:38:47,044 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.06
+2022-05-28 13:38:47,108 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:47,108 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:47,108 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:47,108 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:38:47,110 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:47,124 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:47,171 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:47,171 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:47,171 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:47,171 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f87f518a958ee8ee7dcdc93b40a873fe
+2022-05-28 13:38:47,173 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:47,234 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:47,234 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:47,234 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:38:47,236 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:47,297 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:47,297 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:47,299 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:47,360 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:38:47,362 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:49,196 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:49,198 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.11
+2022-05-28 13:38:49,311 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:38:49,313 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:49,584 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:49,586 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.88
+2022-05-28 13:38:49,849 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:49,851 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.69
+2022-05-28 13:38:50,178 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:50,180 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.42
+2022-05-28 13:38:50,257 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:50,259 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.35
+2022-05-28 13:38:50,476 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.13
+2022-05-28 13:38:50,555 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:50,618 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:50,618 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:50,618 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:50,618 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:50,620 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:50,679 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:50,679 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:50,679 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f87f518a958ee8ee7dcdc93b40a873fe
+2022-05-28 13:38:50,680 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:50,743 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:50,743 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:38:50,744 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:50,805 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:38:50,806 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:50,839 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:50,840 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:38:50,852 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:38:50,867 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:38:50,868 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:52,070 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:52,072 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.75
+2022-05-28 13:38:52,591 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:52,593 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.33
+2022-05-28 13:38:52,816 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:52,818 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.12
+2022-05-28 13:38:52,837 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.11
+2022-05-28 13:38:52,840 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:52,841 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.10
+2022-05-28 13:38:52,930 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.02
+2022-05-28 13:38:52,946 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:52,946 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:52,962 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:52,962 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:52,962 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:52,962 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:52,963 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:52,996 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:52,997 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:38:53,008 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:38:53,023 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:53,023 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:53,023 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:53,023 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f87f518a958ee8ee7dcdc93b40a873fe
+2022-05-28 13:38:53,024 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:53,086 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:53,086 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:53,086 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:38:53,087 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:53,147 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:53,147 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:38:53,149 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:53,208 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:38:53,209 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:54,228 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:54,230 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.86
+2022-05-28 13:38:54,436 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:54,437 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.72
+2022-05-28 13:38:54,438 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:54,439 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.72
+2022-05-28 13:38:54,578 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:54,580 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.58
+2022-05-28 13:38:55,094 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.06
+2022-05-28 13:38:55,170 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:55,170 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:55,170 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:55,170 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f87f518a958ee8ee7dcdc93b40a873fe
+2022-05-28 13:38:55,172 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:55,176 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:38:55,178 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.08
+2022-05-28 13:38:55,232 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:55,232 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:55,232 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:55,248 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:55,248 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:38:55,248 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:55,249 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:55,264 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:38:55,312 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:55,312 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:55,312 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:55,313 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:55,375 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:55,375 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:38:55,377 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:55,437 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:38:55,439 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:57,053 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:57,054 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.53
+2022-05-28 13:38:57,527 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:57,528 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.19
+2022-05-28 13:38:57,558 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:57,559 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.16
+2022-05-28 13:38:57,604 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.13
+2022-05-28 13:38:57,672 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:38:57,673 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:57,727 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:57,727 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:57,727 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:57,742 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:38:57,742 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:57,742 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:57,742 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:57,743 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:57,805 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:57,805 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:57,805 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:57,807 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:57,869 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:57,869 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:38:57,870 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:57,932 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:38:57,933 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:58,050 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:38:58,402 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:38:58,450 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 91e27f51eee2d0bfb4e77a71e12eeef9
+2022-05-28 13:38:58,452 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:38:59,121 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:59,122 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.81
+2022-05-28 13:38:59,140 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:59,142 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.79
+2022-05-28 13:38:59,150 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:59,152 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.77
+2022-05-28 13:38:59,184 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:59,185 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.74
+2022-05-28 13:38:59,193 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:38:59,194 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.74
+2022-05-28 13:38:59,929 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:59,929 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:38:59,945 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:38:59,945 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:59,945 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:59,945 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:59,945 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:38:59,947 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:00,009 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 91e27f51eee2d0bfb4e77a71e12eeef9
+2022-05-28 13:39:00,009 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:00,009 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:00,009 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:00,011 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:00,073 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:39:00,073 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:00,073 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:00,075 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:00,136 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:00,136 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:39:00,138 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:00,199 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:39:00,201 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:01,337 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:39:01,338 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:01,396 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:01,397 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:39:01,398 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:01,399 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:01,462 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 91e27f51eee2d0bfb4e77a71e12eeef9
+2022-05-28 13:39:01,463 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:01,697 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:01,698 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.84
+2022-05-28 13:39:01,736 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:01,737 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.79
+2022-05-28 13:39:01,768 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:01,769 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.76
+2022-05-28 13:39:01,977 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:01,978 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.66
+2022-05-28 13:39:02,016 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:02,017 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.62
+2022-05-28 13:39:02,539 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.11
+2022-05-28 13:39:02,539 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.11
+2022-05-28 13:39:02,539 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.11
+2022-05-28 13:39:02,649 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:02,649 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:02,649 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:02,649 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:02,649 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 91e27f51eee2d0bfb4e77a71e12eeef9
+2022-05-28 13:39:02,651 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:02,713 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:02,713 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:02,713 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:02,713 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:39:02,714 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:02,777 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:02,777 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:02,777 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:39:02,779 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:02,841 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:02,841 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:39:02,842 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:02,905 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 4a6582551e48e98dc276f3acd9ccc22c
+2022-05-28 13:39:02,906 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:03,853 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:03,854 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 91e27f51eee2d0bfb4e77a71e12eeef9
+2022-05-28 13:39:03,855 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:04,464 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:04,465 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.50
+2022-05-28 13:39:04,560 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:04,562 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.40
+2022-05-28 13:39:04,622 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:04,623 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.34
+2022-05-28 13:39:04,758 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:04,759 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.30
+2022-05-28 13:39:04,973 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.08
+2022-05-28 13:39:04,973 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.08
+2022-05-28 13:39:04,973 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.08
+2022-05-28 13:39:05,066 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:05,066 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:05,066 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:05,066 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:39:05,068 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:05,128 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:39:05,128 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:05,128 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:05,129 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:05,192 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:05,192 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 91e27f51eee2d0bfb4e77a71e12eeef9
+2022-05-28 13:39:05,193 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:05,256 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:39:05,257 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:05,260 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:39:05,632 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:39:05,685 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f73efccd454d666689ee89d9f4767148
+2022-05-28 13:39:05,686 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:06,073 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:06,075 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.14
+2022-05-28 13:39:06,158 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:06,159 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.11
+2022-05-28 13:39:06,207 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:39:06,208 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.07
+2022-05-28 13:39:06,227 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:06,228 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:39:06,229 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:06,290 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:39:06,290 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:06,290 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:06,290 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:06,292 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:06,339 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:06,340 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f73efccd454d666689ee89d9f4767148
+2022-05-28 13:39:06,341 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:06,353 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:06,353 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:06,353 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:06,415 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 91e27f51eee2d0bfb4e77a71e12eeef9
+2022-05-28 13:39:06,415 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:06,415 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:06,416 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:06,479 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:06,479 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 7862a6d79e395562b5d0426a67a8b7ab
+2022-05-28 13:39:06,480 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:06,541 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:39:06,542 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:07,295 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 286
+2022-05-28 13:39:07,297 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:39:07,314 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 285
+2022-05-28 13:39:07,315 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.02
+2022-05-28 13:39:07,333 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f73efccd454d666689ee89d9f4767148
+2022-05-28 13:39:07,333 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:07,334 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:07,352 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:07,353 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:39:07,394 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 91e27f51eee2d0bfb4e77a71e12eeef9
+2022-05-28 13:39:07,394 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:07,395 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:07,452 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:07,453 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.92
+2022-05-28 13:39:07,456 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.92
+2022-05-28 13:39:07,874 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:07,875 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.55
+2022-05-28 13:39:08,025 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:08,027 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.41
+2022-05-28 13:39:08,387 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:08,387 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:08,435 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:39:08,435 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:39:08,435 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:39:08,435 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.00
+2022-05-28 13:39:08,451 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:08,451 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:08,451 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:08,451 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f73efccd454d666689ee89d9f4767148
+2022-05-28 13:39:08,453 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:08,515 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:08,515 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 91e27f51eee2d0bfb4e77a71e12eeef9
+2022-05-28 13:39:08,516 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:08,516 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:08,577 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 9f34aaec1022cbfaf4b21165f0cb86ec
+2022-05-28 13:39:08,577 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:08,578 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:08,640 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:39:08,641 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:09,397 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:09,398 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.17
+2022-05-28 13:39:09,569 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f73efccd454d666689ee89d9f4767148
+2022-05-28 13:39:09,570 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:09,707 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:09,708 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.90
+2022-05-28 13:39:10,364 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:10,366 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.26
+2022-05-28 13:39:10,603 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:10,605 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.12
+2022-05-28 13:39:10,620 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.11
+2022-05-28 13:39:10,636 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.09
+2022-05-28 13:39:10,729 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:10,729 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:10,729 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 8be758d45505600a792027abcca873bd
+2022-05-28 13:39:10,730 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:10,792 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:10,792 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f73efccd454d666689ee89d9f4767148
+2022-05-28 13:39:10,795 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:10,800 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:39:10,855 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is 91e27f51eee2d0bfb4e77a71e12eeef9
+2022-05-28 13:39:10,857 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:11,144 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:39:11,197 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is c6886a77a0e9de78ad413428edf22494
+2022-05-28 13:39:11,199 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:11,211 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:39:11,630 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:39:14,598 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:14,600 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.27
+2022-05-28 13:39:14,658 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:14,660 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.25
+2022-05-28 13:39:14,875 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:39:14,923 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:14,923 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f73efccd454d666689ee89d9f4767148
+2022-05-28 13:39:14,925 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:14,986 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is c6886a77a0e9de78ad413428edf22494
+2022-05-28 13:39:14,988 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:16,005 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:39:16,134 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:39:16,335 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:39:16,551 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:39:17,667 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:17,669 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.40
+2022-05-28 13:39:17,906 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:17,907 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.21
+2022-05-28 13:39:18,076 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.03
+2022-05-28 13:39:18,123 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is c6886a77a0e9de78ad413428edf22494
+2022-05-28 13:39:18,123 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:18,125 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:18,186 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f73efccd454d666689ee89d9f4767148
+2022-05-28 13:39:18,187 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:20,946 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:20,947 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.65
+2022-05-28 13:39:20,995 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 429 287
+2022-05-28 13:39:20,996 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.60
+2022-05-28 13:39:21,601 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:39:21,601 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.01
+2022-05-28 13:39:21,616 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is f73efccd454d666689ee89d9f4767148
+2022-05-28 13:39:21,616 sentinelhub.download.sentinelhub_client DEBUG    Request needs to wait. Sleeping for 0.05
+2022-05-28 13:39:21,617 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:21,677 sentinelhub.download.sentinelhub_client DEBUG    Sending POST request to https://services.sentinel-hub.com/api/v1/process. Hash of sent request is c6886a77a0e9de78ad413428edf22494
+2022-05-28 13:39:21,678 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2022-05-28 13:39:24,939 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:39:25,285 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:39:26,075 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "POST /api/v1/process HTTP/1.1" 200 None
+2022-05-28 13:39:26,489 sentinelhub.download.sentinelhub_client DEBUG    Successful POST request to https://services.sentinel-hub.com/api/v1/process
+2022-05-28 13:39:26,541 eolearn.io.sentinelhub_process DEBUG    Downloads complete
+2022-05-28 13:39:26,828 eolearn.core.eoworkflow DEBUG    Computing SaveTask(*[EOPatch(
+  data={
+    BANDS: numpy.ndarray(shape=(44, 500, 500, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(44, 500, 500, 1), dtype=uint8)
+  }
+  mask={
+    CLM: numpy.ndarray(shape=(44, 500, 500, 1), dtype=uint8)
+    IS_DATA: numpy.ndarray(shape=(44, 500, 500, 1), dtype=bool)
+  }
+  meta_info={
+    maxcc: 0.8
+    size_x: 500
+    size_y: 500
+    time_difference: 7200.0
+    time_interval: ('2019-01-01T00:00:00', '2019-12-31T23:59:59')
+  }
+  bbox=BBox(((480000.0, 5125000.0), (485000.0, 5130000.0)), crs=CRS('32633'))
+  timestamp=[datetime.datetime(2019, 1, 1, 10, 7, 46), ..., datetime.datetime(2019, 12, 7, 10, 7, 49)], length=44
+)], **{'eopatch_folder': 'eopatch_3'})
+2022-05-28 13:39:29,588 eolearn.core.eoworkflow DEBUG    Removing intermediate result of SentinelHubInputTask (node uid: SentinelHubInputTask-77360f31de7a11ec9cb3-cca184caf1c1)
+2022-05-28 13:39:29,588 eolearn.core.eoworkflow DEBUG    Removing intermediate result of SaveTask (node uid: SaveTask-77360f32de7a11ec8941-97d3c9fd2209)
+2022-05-28 13:39:29,617 eolearn.core.eoworkflow DEBUG    EOWorkflow ended with results WorkflowResults(outputs={}, start_time=datetime.datetime(2022, 5, 28, 13, 36, 53, 110073), end_time=datetime.datetime(2022, 5, 28, 13, 39, 29, 617538), stats={'SentinelHubInputTask-77360f31de7a11ec9cb3-cca184caf1c1': NodeStats(node_uid='SentinelHubInputTask-77360f31de7a11ec9cb3-cca184caf1c1', node_name='SentinelHubInputTask', start_time=datetime.datetime(2022, 5, 28, 13, 36, 53, 111072), end_time=datetime.datetime(2022, 5, 28, 13, 39, 26, 828576), exception=None, exception_traceback=None), 'SaveTask-77360f32de7a11ec8941-97d3c9fd2209': NodeStats(node_uid='SaveTask-77360f32de7a11ec8941-97d3c9fd2209', node_name='SaveTask', start_time=datetime.datetime(2022, 5, 28, 13, 39, 26, 829576), end_time=datetime.datetime(2022, 5, 28, 13, 39, 29, 588539), exception=None, exception_traceback=None)}, error_node_uid=None)
+2022-05-28 13:39:29,617 eolearn.core.eoworkflow DEBUG    EOWorkflow execution finished!
